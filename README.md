@@ -1,6 +1,6 @@
 # JMH benchmarks for [avro-3094](https://issues.apache.org/jira/browse/AVRO-3094)
 
-this project exists dto demonstrate the issue described in avro-3094 as well as to benchmark its impact and the proposed fix.
+This project exists to demonstrate the issue described in [avro-3094](https://issues.apache.org/jira/browse/AVRO-3094) as well as to benchmark its impact and the proposed fix.
 
 ## how to run
 ./gradlew jmh
