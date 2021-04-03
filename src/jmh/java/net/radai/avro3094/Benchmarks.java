@@ -1,5 +1,6 @@
 package net.radai.avro3094;
 
+import org.apache.avro.specific.SpecificData;
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.Scope;
 import org.openjdk.jmh.annotations.State;
@@ -9,22 +10,22 @@ import org.openjdk.jmh.infra.Blackhole;
 public class Benchmarks {
 
     @Benchmark
-    public void vanillaAvroHappyPath(Blackhole bh) {
-        bh.consume(SpecificDataGetter.vanillaAvro(net.radai.avro3094.by19.SimpleRecord.class));
+    public SpecificData vanillaAvroHappyPath(Blackhole bh) {
+        return SpecificDataGetter.vanillaAvro(net.radai.avro3094.by19.SimpleRecord.class);
     }
 
     @Benchmark
-    public void vanillaAvroSadPath(Blackhole bh) {
-        bh.consume(SpecificDataGetter.vanillaAvro(net.radai.avro3094.by17.SimpleRecord.class));
+    public SpecificData vanillaAvroSadPath(Blackhole bh) {
+        return SpecificDataGetter.vanillaAvro(net.radai.avro3094.by17.SimpleRecord.class);
     }
 
     @Benchmark
-    public void shinyHappyPath(Blackhole bh) {
-        bh.consume(SpecificDataGetter.newShiny(net.radai.avro3094.by19.SimpleRecord.class));
+    public SpecificData shinyHappyPath(Blackhole bh) {
+        return SpecificDataGetter.newShiny(net.radai.avro3094.by19.SimpleRecord.class);
     }
 
     @Benchmark
-    public void shinySadPath(Blackhole bh) {
-        bh.consume(SpecificDataGetter.newShiny(net.radai.avro3094.by17.SimpleRecord.class));
+    public SpecificData shinySadPath(Blackhole bh) {
+        return SpecificDataGetter.newShiny(net.radai.avro3094.by17.SimpleRecord.class);
     }
 }
