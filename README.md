@@ -16,4 +16,4 @@ Benchmarks.vanillaAvroHappyPath  thrpt    5   57251120.785 ±  495866.168  ops/s
 Benchmarks.vanillaAvroSadPath    thrpt    5    1132879.920 ±   20743.977  ops/s
 ```
 
-which shows CacheValue beats reflection and that catching exceptions for control flow is a 50x penalty
+which shows [lava.lang.ClassValue](https://docs.oracle.com/javase/8/docs/api/java/lang/ClassValue.html) beats reflection and that catching exceptions for control flow is a 50x penalty
